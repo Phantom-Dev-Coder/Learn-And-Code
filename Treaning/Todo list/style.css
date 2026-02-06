@@ -1,0 +1,144 @@
+/*Add local font*/
+@font-face {
+  font-family:'BRADHITC';
+  src: 
+  local('BRADHITC'),
+  url('/Treaning/Resursse/Font/BRADHITC.TTF') format('ttf');
+}
+@font-face {
+  font-family: 'Gulzar';
+  src: 
+  local('Gulzar'),
+  url('/Treaning/Resursse/Font/Gulzar-Regular.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'segoepr';
+  src: 
+  local('segoepr'),
+  url('/Treaning/Resursse/Font/segoepr.ttf') format('ttf');
+}
+
+:root {
+  --Font-en : Arial, sans-serif;
+  --Font-fa :'Gulzar', sans-serif;
+  --border: 1px solid white;
+  --padding: 20px 20px;
+  --padding-box: 10px 20px;
+  --box-shadow: 0 8px 6px rgb(174, 174, 174);
+  --border-radius: 20px;
+  --background-color: rgba(0, 0, 0, 0.85);
+}
+
+body {
+  display: grid;
+  grid-template-columns: 600px;
+  gap: 25px;
+  background-color: rgb(112, 112, 112);  
+  padding-top: 200px;
+  padding-left: 200px;
+}
+
+.text {
+  padding: var(--padding);
+  background-color:var(--background-color);
+  color: rgba(255, 255, 255, 0.628);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  font-size: 18px;
+  font-family: var(--Font-en);
+  line-height: 25px;
+}
+
+.input-todo-total {
+  display: grid;
+  grid-template-columns: 1fr 70px 70px 80px;
+  grid-template-rows: 55px;
+  align-items: center;
+  gap: 10px;
+  margin: 25px 0 ;
+  padding: var(--padding);
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  font-family: var(--Font-en);
+}
+
+#date {
+  color: rgba(240, 248, 255, 0);
+  font-size: 20px;
+  padding:5px 20px ;  
+}
+#time {
+  color: rgba(240, 248, 255, 0);
+  font-size: 17px;
+  padding:10px 20px 8px 15px;
+}
+
+.input-text,
+.input-date,
+.input-button,
+.input-time,
+.todo-item-delete {
+  opacity: 0.5;
+  border-radius: var(--border-radius);
+  padding: var(--padding-box);
+  box-shadow: var(--box-shadow);
+  font-size: 14px;
+  color: black;
+ }
+
+.list-text {
+  font-size: 16px;
+  font-family: var(--Font-en);
+  text-align: center;
+}
+/* checkbox of list items */
+/*.Input-check {
+
+}*/
+
+.todo-list {
+  display: grid;
+  grid-template-columns: 3px 25px 2fr 1fr 1fr 80px ;
+  gap: 20px;
+  padding: var(--padding-box);
+  align-items: center;
+  color: white;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  font-family: var(--Font-en);
+  font-size: 15px;
+  list-style-type: decimal;
+}
+
+.todo-item-delete:hover {
+  background-color: black;
+  color: white;
+  box-shadow: none;
+  transition: all 0.8s;
+}
+.input-button:hover {
+  background-color: black;
+  color: white;
+  box-shadow: none;
+  transition: all 0.8s;
+}
+.input-time:hover {
+  background-color: black;
+  color: white;
+  box-shadow: none;
+  transition: all 0.8s; 
+}
+.input-date:hover {
+  background-color: black;
+  color: white;
+  box-shadow: none;
+  transition: all 0.8s; 
+}
+.input-text:hover {
+  background-color: black;
+  color: white;
+  box-shadow: none;
+  transition: all 0.8s; 
+}
