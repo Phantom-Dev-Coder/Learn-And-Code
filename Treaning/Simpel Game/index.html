@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,4 +49,56 @@
   <script src="script.Js"></script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <div class="game-tools">
+    <div class="paragraph">
+      <p>You are very welcom in to my faiveret game ! <br>as you can see <span id="red">Rock Paper Scissors </span>!  <br>this is a simpel game but also can be fun !! </p>
+    </div>
+    <div class="button">
+      <button onclick="
+        GameResult('🪨');
+      ">🪨</button>
+      <button onclick="
+      GameResult('📄');
+      ">📄</button>
+      <button onclick="
+      GameResult('✂️');
+      ">✂️</button>
+    </div>
+    <div class="scor">
+      <div class="scor-p">
+        <p class="scor-p1"></p>
+        <p class="scor-p2"></p>
+        <p class="scor-p3"></p>
+      </div>
+      <div>
+        <p class="picks"></p>
+      </div>
+      <div>
+        <p class="result"></p>
+      </div>
+    </div>
+    <div>
+      <button class="reset" onclick="
+        Score.wins = 0;
+        Score.loses = 0;
+        Score.ties = 0;
+        localStorage.removeItem('localScore');
+        UpdateScorWeb();
+        ">Reset</button>
+    </div>
+  </div>
+  <script src="script.Js"></script>
+
+</body>
+>>>>>>> 74f9fd5f165044ef486b804e8132dd11c2dcf73a
 </html>

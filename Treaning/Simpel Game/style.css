@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Fonte adding */
 @font-face {
   font-family:'impact';
@@ -124,4 +125,132 @@ body {
   box-shadow: none;
   transition: all 0.8s;
   border: none;
+=======
+/* Fonte adding */
+@font-face {
+  font-family:'impact';
+  src:
+  local("impact"), 
+  url('/Treaning/Resursse/Font/impact.ttf') format('ttf');
+}
+@font-face {
+  font-family:'Inkfree';
+  src:
+  local("Inkfree"), 
+  url('/Treaning/Resursse/Font/Inkfree.ttf') format('ttf');
+}
+
+body {
+  background-color: rgb(107, 107, 107);
+  color: white;
+}
+
+.game-tools {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  padding: 10px;
+  border: 1px solid white; 
+  border-radius: 25px;
+  box-shadow: 6px 6px 13px rgb(0, 0, 0);
+  background-color: black;
+}
+
+.paragraph {
+  color: rgb(194, 194, 194);
+  font-family:'Inkfree';
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 50px;
+  margin-bottom: 60px;
+}
+
+#red {
+  font-family:impact ;
+  font-weight: 50;
+  color: rgb(8, 153, 0);
+  text-decoration: underline dashed red;
+}
+
+.button button {
+  font-size: 50px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgb(101, 101, 101);
+  border-radius: 50%;
+  margin: 8px;
+  padding: 20px;
+  box-shadow: -3px 3px 15px gray;
+}
+
+.button button:hover {
+  box-shadow: none;
+  background-color: rgba(128, 128, 128, 0.543);
+  transition: all 0.8s;
+}
+
+.scor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width:520px;
+  text-align: center;
+  background-color: rgb(25, 25, 25);
+  border-radius: 30px;
+  margin: 50px;
+}
+.scor-p {
+  font-size: 20px;
+  font-family: Inkfree;
+  font-weight: 900;
+  line-height: 35px;
+  color:antiquewhite;
+  margin-left: 20px;
+}
+
+.result {
+  width: 82px;
+  font-size: 20px;
+  font-family: Inkfree;
+  font-weight: 900;
+  line-height: 35px;
+  color:rgb(47, 0, 108);
+  background-color: rgba(128, 128, 128, 0.35);
+  padding: 20px;
+  margin-right: 20px;
+  border: 2px dashed orangered;
+  border-radius: 20px;
+  box-shadow: 0 5px 6px gray;
+}
+
+.picks {
+  border: 2px dashed orangered;
+  padding: 20px;
+  font-size: 20px;
+  font-family: Arial;
+  font-weight: 600;
+  line-height: 35px;
+  color:rgb(255, 242, 0);
+  background-color: rgba(128, 128, 128, 0.35);
+  border-radius: 20px;
+  box-shadow: 0 5px 6px gray;
+}
+
+.reset {
+  margin: 0 0 20px 15%;
+  padding: 10px 30px 10px 30px;
+  border-radius: 20px;
+  color: yellow;
+  background-color: black;
+  border: 1px solid yellow ;
+  box-shadow: -3px 3px 5px gray;
+}
+.reset:hover {
+  color: black;
+  background-color: yellow;
+  font-weight: bold;
+  box-shadow: none;
+  transition: all 0.8s;
+  border: none;
+>>>>>>> 74f9fd5f165044ef486b804e8132dd11c2dcf73a
 }
