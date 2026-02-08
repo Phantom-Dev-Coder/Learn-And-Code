@@ -3,14 +3,6 @@ const TodoList = [{
   TodoText : 'Macke Dinner',
   TodoDate : '2026-01-15',
   TodoTime : '21:06'
-},{
-  TodoText : 'Macke Dinner',
-  TodoDate : '2026-01-15',
-  TodoTime : '21:06'
-},{
-  TodoText : 'Macke Dinner',
-  TodoDate : '2026-01-15',
-  TodoTime : '21:06'
 }];
 
 Render();

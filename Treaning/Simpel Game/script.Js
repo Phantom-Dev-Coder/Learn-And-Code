@@ -10,7 +10,7 @@
 //first must use the localStorage.getItem to acses the JSON valius !
 //save in Score objeckt !
 //03 solve the empty score 'null' error shortest method !
-let Score = JSON.parse(localStorage.getItem('localScore')) || {wins : 0, loses : 0, ties : 0}
+let Score = JSON.parse(localStorage.getItem('localScore')) || {wins : 0, loses : 0, ties : 0};
 
 //01 solve the empty score 'null' error !
 /*
