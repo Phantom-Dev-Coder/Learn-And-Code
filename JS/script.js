@@ -3,7 +3,12 @@ const proChengBtn = document.getElementById("pro-btn");
 const proCheng = document.getElementById("explanation");
 const showProject = document.getElementById("project-info");
 const leftBtn = document.getElementById("left-btn");
+const leftBtnR = document.getElementById("left-btn-r");
 const rightBtn = document.getElementById("right-btn");
+const rightBtnR = document.getElementById("right-btn-r");
+const menu = document.getElementById("nav-container");
+const menuBtn = document.getElementById("menu-btn");
+const closeBtn = document.getElementById("close-btn");
 
 let currentInex = 0;
 
@@ -30,6 +35,12 @@ You can also visit our GitHub to see the code type.`,
 }
 ];
 
+//menu and close button for responsive design !
+menuBtn.addEventListener('click', ()=>{
+    document.body.classList.toggle("show-menu");
+});
+closeBtn.addEventListener('click', ()=> menuBtn.click());
+
 //project button to chenge the page (screen)
 proChengBtn.addEventListener("click", ()=>{
    proCheng.classList.remove("active");
@@ -43,26 +54,29 @@ leftBtn.addEventListener('click', ()=>{
     projectRender();
 });
 
+leftBtnR.addEventListener('click', () => leftBtn.click());
+
 rightBtn.addEventListener('click', () => {
     currentInex++;
     if (currentInex >= proInfo.length) currentInex = 0;
     projectRender();
 });
 
+rightBtnR.addEventListener('click', () => rightBtn.click());
+
 // update the project
 function projectRender () {
     const {name, discription, img, seePro, gitHub } = proInfo[currentInex];
     document.querySelector('.project-show').innerHTML = `
-        <div class="description">
-            <h3>${name}</h3>
-            <p>${discription}</p>
-        </div>
-        <div class="project-interaction">
-            <img src=${img} alt="project photo">
-            <div class="interaction-btn">
-                <a href= ${seePro} class="project-link">Playe</a>
-                <a href=${gitHub} class="project-link">GitHub</a>
-            </div>
+    <div class="project-show-part-text">
+        <h3>${name}</h3>
+        <p>${discription}</p>
+    </div>
+    <div class="project-show-part-eye">
+        <img src="${img}" alt="project photo">
+        <div class="interaction-btn">
+            <a href="${seePro}" class="project-link">Playe</a>
+            <a href="${gitHub}" class="project-link">GitHub</a>
         </div>
     </div>    
     `;
