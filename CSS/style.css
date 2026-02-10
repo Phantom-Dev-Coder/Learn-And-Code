@@ -379,12 +379,195 @@ main .project-screen .project-section .img img {
     }
 }
 
-@media screen and (max-width:640px){
-    :root {
+@media screen and (max-width:800px){
+    :root{
         --font-fa-01: "Roboto" , sans-serif;
         --font-fa-02: "Momo Signature" ,cursive, sans-serif;
         --font-fa-03: "Fire Sans" , sans-serif;
 
+        --fo-size-01: 12px;
+        --fo-size-02: 14px;
+        --fo-size-03: 16px;
+        --fo-size-04: 18px; 
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .header-container .menu-btn {
+        display: block;
+        background-color: transparent;
+        border: none;
+    }
+    
+    .header-container .menu-btn img{
+        width: 35px;
+    }
+    
+    .header-container .nav-container .nav-items .close-btn {
+        display: block;
+        margin-bottom: 50px;
+    }
+    
+    .header-container .nav-container .close-btn img {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 30px;
+    }
+
+    .header-container .nav-container {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -40%;
+        bottom: 0;
+        width: 40%;
+        border-radius: none;
+        background-color: var(--color-03);
+        transition: all 0.7s;
+    }
+
+    body.show-menu .header-container .nav-container {
+        left: 0;
+    }
+
+    .header-container .nav-container .nav-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header-container .nav-container .nav-items .nav-link {
+        margin: 10px 20px;
+        padding: 10px 0;
+        box-shadow: none;
+        border-radius: none;
+        font-size: var(--fo-size-02);
+        color: var(--color-07);
+        background-color: var(--color-03);
+    }
+
+    main .intro-section {
+        background-image: url(/Ressurs/Image/cute-astronaut-Phone.jpg);
+    }
+
+    main .intro-section .intro-text {
+        display: block;
+        width: 280px;
+        margin: -90px 10px;
+    }
+
+    main .intro-section .intro-text h3 {
+        margin: 5px;
+        font-size: var(--fo-size-03);
+    }
+    
+    main .intro-section .intro-text p {
+        line-height: 25px;
+        font-size: var(--fo-size-01);
+    }
+
+    main .home-section .home-section-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin: 80px 0;
+        padding: 0;
+    }
+
+    main .home-section .home-section-container .home-section-parts {
+        margin: 0;
+        padding: 15px 15px;
+        width: 100%;
+        height: 100%;
+    }
+
+    main .home-section .home-section-container .home-section-parts.row {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    main .home-section .home-section-container .home-section-parts h2 {
+        font-size: var(--fo-size-04);
+    }
+
+    main .home-section .home-section-container .home-section-parts p {
+        font-size: var(--fo-size-02);
+        font-weight: 500;
+        line-height: 23px;
+    }
+    main .home-section .home-section-container .home-section-parts .home-section-list .list {
+        list-style: none;
+    }
+
+    main .home-section .home-section-container .home-section-parts .home-section-list .list h3 {
+        font-size: var(--fo-size-03);
+        text-decoration: underline solid red;
+        margin:8px 0;
+    }
+
+    main .home-section .home-section-container .home-section-parts .home-section-list .list .list-p {
+        font-size: var(--fo-size-02);
+        line-height: 20px;
+        margin-left: 8px;
+    }
+
+    main .project .project-section-explanation {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-size: var(--fo-size-03);
+        width: 50%;
+    }
+
+    main .project .project-screen .screen .project-section .img {
+        display: none;
+    }
+
+    main .project .project-screen .project-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .project .project-screen .screen .project-section .project-show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .project-screen .project-section .project-show .project-show-part-text {
+        flex: 1;
+        width: 75%;
+        margin: 10px auto;
+    }
+
+    main .project-screen .project-section .project-show .project-show-part-eye {
+        flex: 7;
+        gap: 30px;
+    }
+
+    main .project-screen .project-section .project-show img{
+        width: 50%;
+        margin: 0 40px;
+    }
+
+    main .project .project-screen .project-section .project-nav .img {
+        display: inline;
+        position: relative;
+        bottom: 50px;
+        left: 32%;
+    }
+    
+    main .project .project-screen .project-section .project-nav .img img {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width:640px){
+    :root {
         --fo-size-01: 12px;
         --fo-size-02: 14px;
         --fo-size-03: 16px;
@@ -401,16 +584,6 @@ main .project-screen .project-section .img img {
         --color-08: rgba(255, 255, 255, 0.55);
         --color-09: brown;
         
-        --padding-01: 5px 20px;
-        
-        --box-shadow-01: 2px 3px 5px wheat;
-        --box-shadow-02: 5px 8px 9px rgb(82, 82, 82);
-        --box-shadow-03: 2px 3px 5px rgb(65, 65, 65);
-        
-        --border-radius-circel: 50%;
-        --border-radius-01: 20px;
-        --border-radius-02: 40px;
-
         --max-hight: 100vh;
 
         --border: 2px solid red;
@@ -566,11 +739,6 @@ main .project-screen .project-section .img img {
     }
 
     main .project .project-screen .screen .project-section .project-show {
-        display: flex;
-        flex-direction: column;
-    }
-
-    main .project-screen .project-section .project-show {
         display: flex;
         flex-direction: column;
     }
