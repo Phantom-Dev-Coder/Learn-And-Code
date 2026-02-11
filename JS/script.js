@@ -20,7 +20,7 @@ const proInfo = [
     An interesting project that can be very interesting.
     Of course, to create it, you need skills in HTML, CSS, and JavaScript.
     Of course, you can design the skin with HTML and CSS and add JavaScript to it later.`,
-    img :"./Ressurs/Image/Rock Paper Scissors.png",
+    img :"./Ressurs/Image/project/Rock Paper Scissors.png",
     seePro :"./Treaning/Simpel Game/index.html",
     gitHub :"https://github.com/Phantom-Dev-Coder/Learn-And-Code/tree/main/Treaning/Simpel%20Game"
 },{
@@ -29,7 +29,7 @@ const proInfo = [
 First, design the skin with HTML and CSS.
 In the next step, give it movement using JavaScript.
 You can also visit our GitHub to see the code type.`,
-    img : "./Ressurs/Image/ToDo.png",
+    img : "./Ressurs/Image/project/ToDo.png",
     seePro :"./Treaning/Todo list/index.html",
     gitHub :"https://github.com/Phantom-Dev-Coder/Learn-And-Code/tree/main/Treaning/Todo%20list"
 }

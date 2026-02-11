@@ -34,6 +34,7 @@
 
     --border: 2px solid red;
     --border-01: 1px solid orangered;
+    --border-02: 1px solid wheat;
 }
 
 html {
@@ -131,7 +132,7 @@ img {
 main .intro-section {
     height: var(--max-hight);
     padding-top: 100px;
-    background-image: url(../Ressurs/Image/cute-astronaut-decks.jpg);
+    background-image: url(../Ressurs/Image/screen/cute-astronaut-decks.jpg);
     background-position: center;
     background-size:cover ;
 }
@@ -217,7 +218,7 @@ main .home-section .home-section-social {
 
 main .home-section .home-section-social img {
     margin-bottom: 20px;
-    width: 40px;
+    width: 30px;
     border-radius: var(--border-radius-circel);
     transition: all 0.7s;
 }
@@ -370,20 +371,120 @@ main .project-screen .project-section .img img {
     width: 110px;
 }
 
+main .game-section  {
+    height: var(--max-hight);
+    background-color: var(--color-07);
+}
+
+main .game-section .game-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 50px;
+    gap: 20px;
+
+}
+
+main .game-section .game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    padding: 50px 0;
+    border-radius: var(--border-radius-02);
+    box-shadow: var(--box-shadow-02);
+    background-color: var(--color-05);
+}
+
+main .game-section .game img {
+    border-radius: var(--border-radius-02);
+    width: 350px;
+    margin: 15px 0;
+}
+
+main .game-section .game a {
+    margin: 20px;
+    padding: var(--padding-01);
+    border-radius: var(--border-radius-01);
+    color: var(--color-01);
+    background-color: var(--color-06);
+    box-shadow: var(--box-shadow-03);
+    transition: all 0.5s;
+}
+
+main .game-section .game a:hover {
+    box-shadow: none;
+    background-color: var(--color-05);
+    color: var(--color-06);
+    border: var(--border-02);
+}
+
+main .gallery-section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    min-height: var(--max-hight);
+    max-height: fit-content;
+    background-color: var(--color-06);
+}
+
+main .gallery-section .gallery-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+}
+
+main .gallery-section .gallery-container .gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 23%;
+    height: 30vh;
+    border-radius: var(--border-radius-02);
+    background-color: var(--color-05);
+    box-shadow: var(--box-shadow-02);
+    border: var(--border-01);
+}
+
+main .gallery-section .gallery-container .gallery img {
+    border-radius: var(--border-radius-01);
+    width: 60%;
+}
+
+main .gallery-section .gallery-container .gallery a {
+    font-weight: 500;
+    padding: var(--padding-01);
+    background-color: var(--color-07);
+    color: var(--color-08);
+    font-size: var(--fo-size-02);
+    border-radius: var(--border-radius-02);
+    box-shadow: var(--box-shadow-03);
+    transition: all 0.5s;
+}
+
+main .gallery-section .gallery-container .gallery a:hover {
+    box-shadow: none;
+    color: var(--color-07);
+    background-color: var(--color-05);
+    border: var(--border-02);
+}
+
+main .about-section {
+    height: var(--max-hight);
+    background-color: var(--color-07);
+}
+
+main .about-section img {
+    margin: 50px;
+    width: 150px;
+    border-radius: var(--border-radius-circel);
+}
 
 /*responsiv layout for phone screen*/
 
 @media screen and (max-width:1024px){
-
-}
-
-@media screen and (max-width:900px){
-    main .intro-section{
-        background-image: url(/Ressurs/Image/cute-astronaut-tablet.jpg);
-    }
-}
-
-@media screen and (max-width:800px){
     :root{
         --font-fa-01: "Roboto" , sans-serif;
         --font-fa-02: "Momo Signature" ,cursive, sans-serif;
@@ -455,7 +556,7 @@ main .project-screen .project-section .img img {
     }
 
     main .intro-section {
-        background-image: url(/Ressurs/Image/cute-astronaut-Phone.jpg);
+        background-image: url(/Ressurs/Image/screen/cute-astronaut-tablet.jpg);
     }
 
     main .intro-section .intro-text {
@@ -638,7 +739,7 @@ main .project-screen .project-section .img img {
     }
     
     main .intro-section {
-        background-image: url(/Ressurs/Image/cute-astronaut-Phone.jpg);
+        background-image: url(/Ressurs/Image/screen/cute-astronaut-Phone.jpg);
     }
 
     main .intro-section .intro-text {
