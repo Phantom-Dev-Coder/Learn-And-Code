@@ -11,16 +11,14 @@
     --fo-size-03: 22px;
     --fo-size-04: 26px;
 
-    --color-00: rgba(0, 0, 0, 0.9);
     --color-01: black;
     --color-02: white;
     --color-03: wheat;
-    --color-04: rgba(0, 0, 0, 0.7);
-    --color-05: rgb(164, 255, 28);
-    --color-06: rgb(206, 206, 206);
-    --color-07: rgb(255, 72, 0);
-    --color-08: rgba(255, 255, 255, 0.55);
-    --color-09: brown;
+    --color-04: rgb(34, 34, 34);
+    --color-05: rgb(250, 129, 18);
+    --color-06: rgb(245, 231, 198);
+    --color-07: rgb(250, 243, 225);
+    --color-08: brown;
     
     --padding-01: 5px 20px;
     
@@ -67,7 +65,7 @@ img {
     padding-top: 75px;
     font-size: var(--fo-size-04);
     font-weight: 600;
-    color: var(--color-09);
+    color: var(--color-08);
 }
 /*make underline effect for section section*/
 .section-titel::after {
@@ -90,13 +88,13 @@ img {
     left: 0;
     width: 100%;
     height: 70px;
-    background-color:var(--color-00); 
+    background-color:var(--color-01); 
 }
 
 .header-container .logo .logo-text {
     font-family: var(--font-fa-02);
     font-size: var(--fo-size-04);
-    color: var(--color-05);
+    color: var(--color-06);
 }
 
 .header-container .menu-btn {
@@ -110,7 +108,6 @@ img {
 .header-container .nav-container .nav-items {
     display: flex;
     gap: 15px;
-    color: var(--color-02);
 }
 
 .header-container .nav-container .nav-items .nav-link {
@@ -121,14 +118,14 @@ img {
     border-radius:var(--border-radius-01);
     box-shadow: var(--box-shadow-01);
     background-color: var(--color-01);
-    color: var(--color-02);
+    color: var(--color-07);
     transition: all 0.7s;
 }
 
 .header-container .nav-container .nav-items .nav-link:hover {
     box-shadow: none;
     color: var(--color-01);
-    background-color: var(--color-02);
+    background-color: var(--color-07);
 }
 
 main .intro-section {
@@ -140,18 +137,17 @@ main .intro-section {
 }
 
 main .intro-section .intro-text {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: block;
     width: 350px;
     height: auto;
-    margin: -20px 15px;
+    margin: -80px 15px;
     padding: var(--padding-01);
-    background-color: var(--color-08);
+    background-color: var(--color-07);
     border-radius: var(--border-radius-01);
 }
 
 main .intro-section .intro-text h3 {
+    margin-bottom: 10px;
     font-family: var(--font-fa-01);
     font-size: var(--fo-size-03);
     font-weight: 600;
@@ -162,7 +158,7 @@ main .intro-section .intro-text p {
     font-family: var(--font-fa-03);
     font-size: var(--fo-size-02);
     color: var(--color-04);
-    line-height: 30px;
+    line-height: 28px;
 }
 
 main .home-section {
@@ -170,7 +166,7 @@ main .home-section {
     display: grid;
     grid-template-rows: 50px 1fr 50px;
     row-gap: 10px;
-    background-color: var(--color-03);
+    background-color: var(--color-07);
     padding: 0 50px;
 }
 
@@ -185,35 +181,43 @@ main .home-section .home-section-container .home-section-parts{
     width: 30%;
     height: 70vh;
     padding: 30px;
-    background-color: var(--color-02);
+    background-color: var(--color-05);
     border-radius: var(--border-radius-02);
     box-shadow: var(--box-shadow-02);
     border: var(--border);
 }
 
-main .home-section .home-section-container .home-section-parts .list-p {
-    line-height: 30px;
+main .home-section .home-section-container .home-section-parts .home-section-list .list {
+    list-style-type:none;
+}
+
+main .home-section .home-section-container .home-section-parts .home-section-list .list h3{
+    margin:10px 0;
+    font-size: var(--fo-size-03);
 }
 
 main .home-section .home-section-container .home-section-parts h2 {
     margin: 20px 0;
-    color: var(--color-07);
+    font-size: var(--fo-size-03);
+    color: var(--color-04);
 }
 
 main .home-section .home-section-container .home-section-parts p {
     line-height: 38px;
+    font-size: var(--fo-size-02);
+    color: var(--color-07);
 }
 
 main .home-section .home-section-social {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 main .home-section .home-section-social img {
     margin-bottom: 20px;
-    width: 30px;
+    width: 40px;
     border-radius: var(--border-radius-circel);
     transition: all 0.7s;
 }
@@ -259,8 +263,8 @@ main .project .project-section-explanation {
     color: var(--color-05);
     border-radius: var(--border-radius-02);
     box-shadow: var(--box-shadow-02);
-    font-size: var(--fo-size-02);
-    line-height: 28px;
+    font-size: var(--fo-size-03);
+    line-height: 35px;
     border: var(--border);
 }
 
@@ -269,7 +273,7 @@ main .project .project-section-explanation .project-btn {
     padding: 10px 20px;
     border: none;
     border-radius: var(--border-radius-02);
-    background-color: var(--color-03);
+    background-color: var(--color-05);
     color: var(--color-07);
     font-size: var(--fo-size-02);
     box-shadow: var(--box-shadow-01);
@@ -295,9 +299,9 @@ main .project .project-screen .project-section .project-nav .img {
 main .project-screen .project-section .project-show {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
     height: 80%;
-    background-color: var(--color-03);
+    background-color: var(--color-05);
     border-radius: var(--border-radius-02);
     box-shadow: var(--box-shadow-02);
 }
@@ -308,7 +312,7 @@ main .project-screen .project-section .project-show .project-show-part-text {
 }
 
 main .project-screen .project-section .project-show .project-show-part-text h3 {
-    font-size: var(--fo-size-04);
+    font-size: var(--fo-size-03);
     text-align: center;
     text-decoration: underline black;
     margin-bottom: 20px;
@@ -426,8 +430,8 @@ main .project-screen .project-section .img img {
         bottom: 0;
         width: 40%;
         border-radius: none;
-        background-color: var(--color-03);
-        transition: all 0.7s;
+        background-color: var(--color-06);
+        transition: all 0.5s;
     }
 
     body.show-menu .header-container .nav-container {
@@ -446,8 +450,8 @@ main .project-screen .project-section .img img {
         box-shadow: none;
         border-radius: none;
         font-size: var(--fo-size-02);
-        color: var(--color-07);
-        background-color: var(--color-03);
+        color: var(--color-08);
+        background-color: var(--color-07);
     }
 
     main .intro-section {
@@ -571,23 +575,7 @@ main .project-screen .project-section .img img {
         --fo-size-01: 12px;
         --fo-size-02: 14px;
         --fo-size-03: 16px;
-        --fo-size-04: 18px;
-
-        --color-00: rgba(0, 0, 0, 0.9);
-        --color-01: black;
-        --color-02: white;
-        --color-03: wheat;
-        --color-04: rgba(0, 0, 0, 0.7);
-        --color-05: rgb(164, 255, 28);
-        --color-06: rgb(206, 206, 206);
-        --color-07: rgb(255, 72, 0);
-        --color-08: rgba(255, 255, 255, 0.55);
-        --color-09: brown;
-        
-        --max-hight: 100vh;
-
-        --border: 2px solid red;
-        --border-01: 1px solid orangered;
+        --fo-size-04: 18px; 
     }
 
     .header-container {
@@ -625,7 +613,7 @@ main .project-screen .project-section .img img {
         bottom: 0;
         width: 40%;
         border-radius: none;
-        background-color: var(--color-03);
+        background-color: var(--color-06);
         transition: all 0.7s;
     }
 
@@ -645,8 +633,8 @@ main .project-screen .project-section .img img {
         box-shadow: none;
         border-radius: none;
         font-size: var(--fo-size-02);
-        color: var(--color-07);
-        background-color: var(--color-03);
+        color: var(--color-08);
+        background-color: var(--color-07);
     }
     
     main .intro-section {
@@ -680,9 +668,9 @@ main .project-screen .project-section .img img {
     main .home-section .home-section-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
-        gap: 10px;
+        gap: 50px;
         margin: 0;
         padding: 0;
     }
@@ -690,7 +678,7 @@ main .project-screen .project-section .img img {
     main .home-section .home-section-container .home-section-parts{
         flex:auto;
         width: 90%;
-        height: auto;
+        height: 1/3;
         margin: 0;
         padding: 10px 25px;
     }
@@ -773,7 +761,7 @@ main .project-screen .project-section .img img {
         display: inline;
         position: relative;
         bottom: 50px;
-        left: 20%;
+        left: 26%;
     }
     
     main .project .project-screen .project-section .project-nav .img img {
