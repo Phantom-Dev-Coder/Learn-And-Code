@@ -10,6 +10,7 @@
     --fo-size-02: 18px;
     --fo-size-03: 22px;
     --fo-size-04: 26px;
+    --fo-size-05: 28px;
 
     --color-01: black;
     --color-02: white;
@@ -24,6 +25,7 @@
     --padding-02: 10px 30px;
     --padding-03: 20px 5px;
     --padding-04: 30px 10px;
+    --padding-05: 10px 50px;
     
     --box-shadow-01: 2px 3px 5px wheat;
     --box-shadow-02: 5px 8px 9px rgb(82, 82, 82);
@@ -39,6 +41,7 @@
     --border: 2px solid red;
     --border-01: 3px solid orangered;
     --border-02: 1px solid wheat;
+    --border-03: 3px solid wheat;
 
     --transition: all ease-out 0.5s;
 
@@ -149,8 +152,7 @@ img {
 }
 
 main .intro-section {
-    max-height: var(--max-higth);
-    min-height: var(--min-hight);
+    height: var(--min-hight);
     padding-top: 100px;
     background-image: url(../Ressurs/Image/screen/cute-astronaut-decks.jpg);
     background-position: center;
@@ -309,6 +311,7 @@ main .project .project-screen .project-section .project-nav .img {
 main .project-screen .project-section .project-show {
     margin: auto;
     display: flex;
+    justify-content: space-around;
     align-items: center;
     height: 70vh;
     background-color: var(--color-05);
@@ -493,6 +496,9 @@ main .gallery-section .gallery-container .gallery a:hover {
 main .about-section {
     max-height: var(--max-higth);
     min-height: var(--min-hight);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--color-07);
 }
 
@@ -537,6 +543,118 @@ main .about-section .about .contact p {
     color: var(--color-04);
     line-height: 35px;
     padding: 30px;
+}
+
+main .contact-section {
+    max-height: var(--max-higth);
+    min-height: var(--min-hight);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-06);
+}
+
+main .contact-section .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    background-color: var(--color-05);
+    width: 60%;
+    height: 80vh;
+    border-radius: var(--border-radius-02);
+    box-shadow: var(--box-shadow-02);
+}
+
+main .contact-section .contact-container h3 {
+    font-family: var(--font-fa-02);
+    font-size: var(--fo-size-05);
+    font-weight: 300;
+    color: var(--color-02);
+    text-decoration: var(--text-decoration);
+    margin: 30px auto;
+}
+
+main .contact-section .contact-container .contact-form fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    width: 200%;
+    margin-left: 30px;
+}
+
+main .contact-section .contact-container .contact-form fieldset label {
+    font-size: var(--fo-size-04);
+    color:var(--color-08);
+}
+
+main .contact-section .contact-container .contact-form fieldset label input {
+    padding: var(--padding-05);
+    background-color: transparent;
+    border: var(--border-03);
+    border-radius: var(--border-radius-01);
+    align-items: end;
+}
+
+main .contact-section .contact-container .contact-form fieldset label input::placeholder {
+    font-size: var(--fo-size-02);
+    color: var(--color-02);
+    opacity: 0.8;
+}
+
+main .contact-section .contact-container .contact-form fieldset label input[type="radio"] {
+    width: 35px;
+    height: 24px;
+    accent-color: var(--color-08);
+}
+
+main .contact-section .contact-container .contact-form fieldset .textarea {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+main .contact-section .contact-container .contact-form fieldset .textarea textarea {
+    background-color: var(--color-06);
+    font-size: var(--fo-size-02);
+    font-family: var(--font-fa-01);
+    line-height: 30px;
+    margin: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: var(--border-radius-01);
+    box-shadow: var(--box-shadow-02);
+    opacity: 0.7;
+    resize: vertical;
+    width: 110%;
+}
+
+main .contact-section .contact-container .contact-form fieldset .textarea p {
+    color: var(--color-08);
+    font-size: var(--fo-size-04);
+    padding:0;
+}
+
+main .contact-section .contact-container .contact-form fieldset button {
+    padding: var(--padding-02);
+    width: 15%;
+    background-color: var(--color-06);
+    border: none;
+    border-radius: var(--border-radius-01);
+    color: var(--color-08);
+    font-size: var(--fo-size-03);
+    font-weight: 600;
+    box-shadow: var(--box-shadow-03);
+    margin: auto;
+    transition: var(--transition);
+}
+
+main .contact-section .contact-container .contact-form fieldset button:hover{
+    box-shadow: none;
+    color: var(--color-02);
+    background-color: var(--color-05);
+    border: var(--border-02);
 }
 
 /*responsiv layout for phone screen*/
