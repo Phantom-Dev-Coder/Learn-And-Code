@@ -21,6 +21,9 @@
     --color-08: brown;
     
     --padding-01: 5px 20px;
+    --padding-02: 10px 30px;
+    --padding-03: 20px 5px;
+    --padding-04: 30px 10px;
     
     --box-shadow-01: 2px 3px 5px wheat;
     --box-shadow-02: 5px 8px 9px rgb(82, 82, 82);
@@ -30,13 +33,18 @@
     --border-radius-01: 20px;
     --border-radius-02: 40px;
 
-    --max-hight: 100vh;
+    --min-hight: 100vh;
+    --max-higth: max-content;
 
     --border: 2px solid red;
-    --border-01: 1px solid orangered;
+    --border-01: 3px solid orangered;
     --border-02: 1px solid wheat;
-}
 
+    --transition: all ease-out 0.5s;
+
+    --text-decoration: underline 3px black;
+}
+/*General settings*/
 html {
     scroll-behavior: smooth;
 }
@@ -64,6 +72,7 @@ img {
     text-align: center;
     text-transform: uppercase;
     padding-top: 75px;
+    margin-bottom: 75px;
     font-size: var(--fo-size-04);
     font-weight: 600;
     color: var(--color-08);
@@ -71,7 +80,7 @@ img {
 /*make underline effect for section section*/
 .section-titel::after {
     content: "";
-    width: 120px;
+    width: 140px;
     height: 5px;
     display: block;
     border-radius: var(--border-radius-01);
@@ -79,6 +88,16 @@ img {
     background-color:var(--color-01);
 }
 
+.contact-link img {
+    width: 40px;
+    margin: 30px 15px 15px 15px;
+    transition: var(--transition);
+}
+
+.contact-link img:hover {
+    scale: 1.5;
+}
+/*Settings for each section*/
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -130,7 +149,8 @@ img {
 }
 
 main .intro-section {
-    height: var(--max-hight);
+    max-height: var(--max-higth);
+    min-height: var(--min-hight);
     padding-top: 100px;
     background-image: url(../Ressurs/Image/screen/cute-astronaut-decks.jpg);
     background-position: center;
@@ -163,10 +183,12 @@ main .intro-section .intro-text p {
 }
 
 main .home-section {
-    height: var(--max-hight);
-    display: grid;
-    grid-template-rows: 50px 1fr 50px;
-    row-gap: 10px;
+    max-height: var(--max-higth);
+    min-height: var(--min-hight);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--color-07);
     padding: 0 50px;
 }
@@ -179,8 +201,8 @@ main .home-section .home-section-container {
 }
 
 main .home-section .home-section-container .home-section-parts{
-    width: 30%;
-    height: 70vh;
+    width: 31%;
+    height: 60vh;
     padding: 30px;
     background-color: var(--color-05);
     border-radius: var(--border-radius-02);
@@ -216,30 +238,19 @@ main .home-section .home-section-social {
     gap: 30px;
 }
 
-main .home-section .home-section-social img {
-    margin-bottom: 20px;
-    width: 30px;
-    border-radius: var(--border-radius-circel);
-    transition: all 0.7s;
-}
-
-main .home-section .home-section-social img:hover {
-    transform: scale(1.5);
-}
-
 main .project {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    gap: 50px;
-    height: var(--max-hight);
+    justify-content: space-between;
+    align-items: center;
+    min-height: var(--min-hight);
+    max-height: var(--max-higth);
     background-color: var(--color-06);
 }
 
 main .project-screen {
     display: flex;
-    flex-direction: column;
-    height: var(--max-hight);
+    flex-direction: column;    
 }
 
 main .project .screen {
@@ -247,26 +258,26 @@ main .project .screen {
 }
 
 main .project .screen.active {
-    display:block;
-    height: 90%;
-    justify-items: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main .project .project-section-explanation {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    gap: 40px;
     padding: 20px 30px;
     width: 30%;
-    height: 50%;
+    height: 70%;
     background-color: var(--color-04);
     color: var(--color-05);
     border-radius: var(--border-radius-02);
     box-shadow: var(--box-shadow-02);
     font-size: var(--fo-size-03);
     line-height: 35px;
-    border: var(--border);
+    border: var(--border-01);
 }
 
 main .project .project-section-explanation .project-btn {
@@ -278,7 +289,7 @@ main .project .project-section-explanation .project-btn {
     color: var(--color-07);
     font-size: var(--fo-size-02);
     box-shadow: var(--box-shadow-01);
-    transition: all 0.5s;
+    transition: var(--transition);
 }
 
 main .project .project-section-explanation .project-btn:hover  {
@@ -289,8 +300,6 @@ main .project .project-section-explanation .project-btn:hover  {
 
 main .project .project-screen .screen .project-section {
     display: flex;
-    justify-content: space-between;
-    height: 90vh;
 }
 
 main .project .project-screen .project-section .project-nav .img {
@@ -298,10 +307,10 @@ main .project .project-screen .project-section .project-nav .img {
 }
 
 main .project-screen .project-section .project-show {
+    margin: auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 80%;
+    height: 70vh;
     background-color: var(--color-05);
     border-radius: var(--border-radius-02);
     box-shadow: var(--box-shadow-02);
@@ -309,21 +318,21 @@ main .project-screen .project-section .project-show {
 
 main .project-screen .project-section .project-show .project-show-part-text {
     margin: 40px;
-    width: 30%;
+    width: 45%;
 }
 
 main .project-screen .project-section .project-show .project-show-part-text h3 {
-    font-size: var(--fo-size-03);
+    font-size: var(--fo-size-04);
     text-align: center;
-    text-decoration: underline black;
+    text-decoration:var(--text-decoration);
     margin-bottom: 20px;
-    color: var(--color-07);
+    color: var(--color-02);
 }
 
 main .project-screen .project-section .project-show .project-show-part-text p {
     text-align: left;
     line-height: 35px;
-    font-size: var(--fo-size-02);
+    font-size: var(--fo-size-03);
     font-weight: 500;
     color: var(--color-09);
 }
@@ -337,27 +346,26 @@ main .project-screen .project-section .project-show .project-show-part-eye {
 }
 
 main .project-screen .project-section .project-show img {
-    margin-top: 30px;
-    width: 65%;
+    width: 450px;
     border-radius: var(--border-radius-01);
     box-shadow: var(--box-shadow-02);
 }
 
 main .project-screen .project-section .project-show a {
     margin: 20px;
-    padding: 13px 30px;
+    padding: var(--padding-02);
     box-shadow: var(--box-shadow-03);
     border-radius: var(--border-radius-02);
     color: var(--color-03);
     background-color: var(--color-01);
-    transition: all 0.6s;
+    transition: var(--transition);
 }
 
 main .project-screen .project-section .project-show a:hover{
     box-shadow: none;
     color: var(--color-07);
-    background-color: var(--color-03);
-    border: var(--border-01);
+    background-color: var(--color-05);
+    border: var(--border-02);
 }
 
 main .project-screen .project-section .img {
@@ -372,85 +380,95 @@ main .project-screen .project-section .img img {
 }
 
 main .game-section  {
-    height: var(--max-hight);
+    max-height: var(--max-higth);
+    min-height: var(--min-hight);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--color-07);
 }
 
 main .game-section .game-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 50px;
-    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 
 }
 
 main .game-section .game {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    margin: 15px;
-    padding: 50px 0;
+    width: 25%;
+    margin: 20px;
+    padding: 50px 10px;
     border-radius: var(--border-radius-02);
     box-shadow: var(--box-shadow-02);
     background-color: var(--color-05);
 }
 
 main .game-section .game img {
-    border-radius: var(--border-radius-02);
-    width: 350px;
-    margin: 15px 0;
+    border-radius: var(--border-radius-01);
+    width: 90%;
+    margin: 25px 0;
 }
 
 main .game-section .game a {
     margin: 20px;
+    font-weight: 500;
+    font-size: var(--fo-size-02);
     padding: var(--padding-01);
     border-radius: var(--border-radius-01);
     color: var(--color-01);
     background-color: var(--color-06);
     box-shadow: var(--box-shadow-03);
-    transition: all 0.5s;
+    transition: var(--transition);
 }
 
 main .game-section .game a:hover {
     box-shadow: none;
     background-color: var(--color-05);
-    color: var(--color-06);
+    color: var(--color-02);
     border: var(--border-02);
 }
 
 main .gallery-section {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    min-height: var(--max-hight);
-    max-height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    max-height: var(--max-higth);
+    min-height: var(--min-hight);
     background-color: var(--color-06);
 }
 
 main .gallery-section .gallery-container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
-    
 }
 
 main .gallery-section .gallery-container .gallery {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 23%;
-    height: 30vh;
+    width: 25%;
+    margin: 20px;
+    padding: 50px 10px;
     border-radius: var(--border-radius-02);
-    background-color: var(--color-05);
     box-shadow: var(--box-shadow-02);
-    border: var(--border-01);
+    background-color: var(--color-05);
 }
 
 main .gallery-section .gallery-container .gallery img {
     border-radius: var(--border-radius-01);
-    width: 60%;
+    width: 90%;
+    margin: 25px 0;
 }
 
 main .gallery-section .gallery-container .gallery a {
@@ -461,7 +479,8 @@ main .gallery-section .gallery-container .gallery a {
     font-size: var(--fo-size-02);
     border-radius: var(--border-radius-02);
     box-shadow: var(--box-shadow-03);
-    transition: all 0.5s;
+    transition: var(--transition);
+    margin: 20px;
 }
 
 main .gallery-section .gallery-container .gallery a:hover {
@@ -472,14 +491,52 @@ main .gallery-section .gallery-container .gallery a:hover {
 }
 
 main .about-section {
-    height: var(--max-hight);
+    max-height: var(--max-higth);
+    min-height: var(--min-hight);
     background-color: var(--color-07);
 }
 
-main .about-section img {
+main .about-section .about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
     margin: 50px;
-    width: 150px;
-    border-radius: var(--border-radius-circel);
+}
+
+main .about-section .about .welcom,
+main .about-section .about .about-me,
+main .about-section .about .about-web,
+main .about-section .about .contact {
+    background-color: var(--color-05);
+    width: 65%;
+    font-size: var(--fo-size-03);
+    padding: var(--padding-01);
+    border-radius: var(--border-radius-02);
+    color: var(--color-04);
+    box-shadow: var(--box-shadow-02);
+}
+
+main .about-section .about .welcom h3,
+main .about-section .about .about-me h3,
+main .about-section .about .about-web h3,
+main .about-section .about .contact h3 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: var(--fo-size-04);
+    font-family: var(--font-fa-02);
+    font-weight: 400;
+    text-decoration: var(--text-decoration);
+    color: var(--color-02);
+}
+
+main .about-section .about .welcom p,
+main .about-section .about .about-me p,
+main .about-section .about .about-web p,
+main .about-section .about .contact p {
+    color: var(--color-04);
+    line-height: 35px;
+    padding: 30px;
 }
 
 /*responsiv layout for phone screen*/
