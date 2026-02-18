@@ -1,35 +1,125 @@
+/* Font */
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=SN+Pro:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Kalam:300,regular,700);
+
+:root {
+    /* Colors */
+    --white: #fff;
+    --black: #000;
+    --color-01: #562f00;
+    --color-02: #fe7b17;
+    --color-03: #ffce99;
+    --color-04: #fffdf1;
+    /* Font Familly */
+    --font-family-01: Roboto , sans-serif;
+    --font-family-02: "SN Pro" , sans-serif;
+    --font-family-03: "Kalam" , sans-serif;
+    /* Box Shadow */
+    --box-shadow-01: 4px 4px 12px #000000a5;
+    /*Border*/
+    --border-01: 2px solid green;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  text-align: center;
-  font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    font-family: var(--font-family-01);
+    background-color: var(--color-04);
 }
 
-#question {
-  font-size: large;
+main .version-one .screen {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 50vw;
+    height: 30vh;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-01);
+    border-radius: 1rem;
+
+    .intro-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        h1 {
+            color: var(--color-02);
+            margin: 20px auto;
+        }
+
+        p{
+            font-family: var(--font-family-03);
+            font-size: 1.3rem;
+            color: var(--color-01);
+            margin: 10px 30px;
+        }
+        .start-btn {
+            padding: 10px 30px;
+            background-color: var(--color-01);
+            color: var(--color-03);
+            font-family: var(--font-family-02);
+            border: none;
+            border-radius: 1rem;
+            margin: 10px 0;
+            box-shadow: 3px 4px 6px black;
+            transition: all 0.3s ease-in;
+
+            &:hover{
+                box-shadow: none;
+                background-color: var(--color-03);
+                color: var(--color-01);
+            }
+        }
+    }
 }
 
-#answers {
-  padding: 10px;
-  font-weight: bold;
-}
+main .version-one .game {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
-#score {
-  font-size: 1.5em;
-}
+    h1 {
+        font-family: var(--font-family-03);
+        color: var(--color-01);
+    }
 
-button {
-  font-size: 1.5em;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  background-color: white;
-  padding: 0.2em;
-  border-radius: 10px;
-  border-width: 3px;
-}
+    .qustion-box {
+        border: var(--border-01);
+        width: 40vw;
+        min-height: 10vh;
+        max-height: max-content;
+        border-radius: 1rem;
+        padding: 1rem 1.5rem;
+        background-color: var(--color-03);
+    }
 
-.questionCard {
-  width: 80%;
-  margin: auto;
-  padding: 10px;
-  background-color: lightgray;
-  border-radius: 10px;
+    .answerd {
+        display: flex;
+        gap: 20px;
+
+        button {
+            padding: 0.5rem 1.5rem;
+            color: var(--color-04);
+            background-color: var(--color-01);
+            font-family: var(--font-family-03);
+            font-size: 1rem;
+            border: none;
+            border-radius: 1rem;
+        }
+    }
+
+    .score {
+        font-family: var(--font-family-02);
+        font-size: 1.5rem;
+        color: var(--color-02);
+    }
 }
