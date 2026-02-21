@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=SN+Pro:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Kalam:300,regular,700);
+@import url(https://fonts.googleapis.com/css?family=Kalnia+Glaze:100,200,300,regular,500,600,700);
+
+
+:root {
+    --bg-color: oklch(59.987% 0.00007 271.152);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.8s;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto",sans-serif;
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+body .timer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 400px;
+    height: 40vh;
+    margin: 20vh auto;
+    border-radius: 1rem;
+    border: 2px solid oklch(from var(--bg-color) calc(l + 1) c h);
+    background-color: oklch(from var(--bg-color) calc(l + 0.25) c h);
+
+    h1 {
+        font-family: "sn pro";
+        font-size: 1.8rem;
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        .W {
+            color: black;
+            margin-left: 35px;
+            font-family: "Sn pro";
+            font-size: 2rem;
+        }
+        
+        .N{
+            margin-left: 5px;
+            color: oklch(from var(--bg-color) calc(l + 1) calc(c + 0.8) h);
+            font-family: Kalnia Glaze;
+            font-size: 2rem;
+        }
+    }
+}
+
+body .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+
+    .btn {
+        padding: 5px 35px;
+        border-radius: 1.5rem;
+        border: none;
+        background-color: oklch(from var(--bg-color) calc(l + 1) calc(c + 0.45) calc(h - 0.5));
+        color: oklch(from var(--bg-color) calc(l + 0.6) c h);
+        font-family: Kalam;
+        font-size: 1.5rem;
+        
+
+        &:hover{
+            background-color: black;
+            scale: 1.1;
+        }
+    }
+}

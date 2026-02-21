@@ -36,7 +36,7 @@ body {
 main .version-one .screen {
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin: 25% 25%;
     width: 50vw;
     height: 30vh;
     background-color: var(--white);
